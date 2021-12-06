@@ -40,7 +40,7 @@ const AddAddressOptions = () => {
     const walletSavedList = await wallet.getHighlightWalletList();
     const filterdlist = walletSavedList.filter(Boolean);
     if (filterdlist.toString() !== savedWallet.toString()) {
-      await setSavedWallet(filterdlist);
+      setSavedWallet(filterdlist);
     }
     const accounts = await wallet.getTypedAccounts(KEYRING_CLASS.MNEMONIC);
     if (accounts.length <= 0) {
